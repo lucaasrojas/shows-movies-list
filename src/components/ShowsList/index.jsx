@@ -14,7 +14,7 @@ const ShowsList = (props) => {
     }, []);
 
     return showsList.length ? (
-        <div>
+        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", padding: "2rem"}}>
             {showsList.map((el, i) => (
                 <ShowCard data-testid={`${el.show.id}`} key={el.show.id} {...el} />
             ))}

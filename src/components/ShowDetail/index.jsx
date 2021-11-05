@@ -12,7 +12,12 @@ const ShowDetail = () => {
         }
     }, [show, queryParams.id]);
 
-    return show ? <ShowCard detail show={show} /> : null;
+    return show ? (
+        <div style={{display: "flex", justifyContent: "center"}}>
+            <ShowCard detail show={show} />
+        </div>
+
+    ) : null;
 };
 
 export default ShowDetail;
